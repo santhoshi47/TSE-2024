@@ -1,0 +1,30 @@
+//prime factorization//
+//find factor between two numbers l and r//
+//sieve of eratosthenes//
+
+
+#include<bits/stdc++.h>
+using namespace std;
+const int maxi=1e6+5;
+bool Is_Prime(long long num)
+{
+if(num==1)return false;
+for(int i=0;i<=sqrt(num);i++) //or i*i<=num for sqrt(num) 
+{
+if(num%i==0)return false;
+}
+return true;
+}
+
+int main()
+{
+long long n;
+cin>>n;
+//give l,r find primes between them//
+while(n--){
+long long l,r;
+ for(long long x=l;x<=r;x++)
+{
+if(Is_Prime(x))count<<x<<" ";
+}
+}
