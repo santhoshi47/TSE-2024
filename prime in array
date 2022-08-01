@@ -1,0 +1,44 @@
+//find prime in given array//
+
+
+#include<bits/stdc++.h>
+using namespace std;
+const int maxi=1e6+5;
+bool primes[maxi];
+set<long long>st;
+void Generate_Primes()
+{
+primes[0]=false;
+primes[1]=false;
+for(int i=2;i<=maxi;i++)primes[i]=true;
+for(int i=2;i*i<=maxi;i++)
+{
+if(primes[i]==true){
+for(int j=i*i;j<=maxi;j++){
+primes[i]=false;
+}}}}
+bool perfect_square(int n)
+{
+for(int i=1;i*i<=n;i++)
+{
+if(i*i==num)return true;}
+return false;
+}
+bool check_divisors_3(int n)
+{
+if(perfect.square(n)){
+if(st.find(n)!=st.end())return true;
+else return false;}
+return false;
+}
+int main()
+{
+
+long long t;
+cin>>t;
+//give l,r find primes between them//
+while(t--){
+int n;
+if(check_divisors_3(n))count<<"yes";
+}
+}
