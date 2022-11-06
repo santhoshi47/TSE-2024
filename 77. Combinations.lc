@@ -1,0 +1,21 @@
+class Solution {
+    public void combinations(int start,int n,int size,int k,List<Integer> ds,List<List<Integer>> ans){
+        if(start>n)
+        {
+            if(size==k){
+                ans.add(new ArrayList<>(ds));}
+        return;
+    }
+    ds.add(start);
+    combinations(start+1,n,size+1,k,ds,ans);
+    ds.remove(ds.size()-1);
+    combinations(start+1,n,size,k,ds,ans);   
+    }
+    public List<List<Integer>> combine(int n, int k) {
+        
+        List<List<Integer>> ans=new ArrayList<>();
+        List<Integer> ds=new ArrayList<>();
+        combinations(1,n,0,k,ds,ans);
+        return ans;
+    }
+}
